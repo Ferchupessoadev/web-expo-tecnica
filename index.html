@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Expo Técnica 2023</title>
+    <title>Computación - Expo Técnica 2023</title>
+    <link
+      rel="shortcut icon"
+      href="./img/icon-school.png"
+      type="image/x-icon"
+    />
     <!-- tailwindcss -->
     <link rel="stylesheet" href="./dist/output.css" />
     <!-- Font ROBOTO Condensed -->
@@ -25,21 +30,52 @@
     ></script>
   </head>
   <body>
-    <header>
-      <nav
-        class="flex justify-center items-center bg-green-700 h-[60px] relative"
+    <header
+      class="flex sm:justify-center justify-end pr-10 items-center bg-red-950 h-[60px] relative"
+    >
+      <h1 class="text-white sm:text-[30px] text-[14px]">
+        Expo Técnica 2023 - Computación
+      </h1>
+      <button
+        class="group p-0 m-0 outline-none absolute left-4 w-auto h-auto"
+        id="nav-btn"
       >
-        <h1 class="text-white text-[30px]">Expo Técnica 2023 - Computación</h1>
-        <button
-          class="group p-0 m-0 outline-none absolute right-2 w-auto h-auto"
-          id="icon-menu"
-        >
-          <i
-            class="text-white group-hover:text-gray-200 fa-solid fa-bars text-[30px] pr-4"
-          ></i>
-        </button>
-      </nav>
-      
+        <i
+          class="text-white group-hover:text-gray-200 fa-solid fa-bars sm:text-[30px] text-[28px] pr-4"
+        ></i>
+      </button>
     </header>
+    <nav
+      class="transition-transform duration-300 ease-in-out absolute sm:w-max w-full h-[calc(100%_-_60px)] bg-red-950 flex flex-col justify-start gap-4 left-0 translate-x-[-100%]"
+      id="nav"
+    >
+      <h1 class="sm:px-16 px-8 text-[30px] flex flex-col items-center">
+        E.E.T N°2 <b>"Independencia"</b>
+      </h1>
+      <ul class="flex flex-col">
+        <li class="py-3 bg-red-950 text-[18px]">
+          <a class="sm:px-16 px-8 hover:text-red-800" href="#">Inicio</a>
+        </li>
+        <li class="py-3 bg-red-950 text-[18px]">
+          <a class="sm:px-16 px-8 hover:text-red-800" href="#">Drones</a>
+        </li>
+        <li class="py-3 bg-red-950 text-[18px]">
+          <a class="sm:px-16 px-8 hover:text-red-800" href="#">Robobloq</a>
+        </li>
+        <li class="py-3 bg-red-950 text-[18px]">
+          <a class="sm:px-16 px-8 hover:text-red-800" href="#"
+            >Brazo robotico</a
+          >
+        </li>
+      </ul>
+      <div class="w-[100%] h-max flex justify-center">
+        <img
+          class="sm:w-[180px] sm:h-[180px] w-[150px] h-[150px] flex justify-center"
+          src="./img/icon-school.png"
+          alt=""
+        />
+      </div>
+    </nav>
+    <script src="js/app.js" type="module"></script>
   </body>
 </html>
