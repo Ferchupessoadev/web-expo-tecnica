@@ -85,20 +85,46 @@
         class="w-[100%] h-[calc(100vh_-_60px) bg-black opacity-50 absolute gap-2"
       ></div>
       <div
-        class="h-[100%] grid grid-cols-[repeat(4,minmax(0px,_1fr))] grid-rows-[repeat(2,minmax(0px,_1fr))]"
+        class="h-[100%] grid grid-cols-[repeat(1,minmax(0px,_1fr))] sd:grid-cols-[repeat(2,minmax(0px,_1fr))] md:grid-cols-[repeat(3,minmax(0px,_1fr))] xl:grid-cols-[repeat(4,minmax(0px,_1fr))] grid-rows-[repeat(2,minmax(0px,_1fr))]"
       >
         <img class="h-[100%] w-[100%]" src="./img/welcome/1.jpeg" alt="" />
         <img class="h-[100%] w-[100%]" src="./img/welcome/2.jpeg" alt="" />
-        <img class="h-[100%] w-[100%]" src="./img/welcome/3.jpeg" alt="" />
-        <img class="h-[100%] w-[100%]" src="./img/welcome/4.jpeg" alt="" />
-        <img class="h-[100%] w-[100%]" src="./img/welcome/5.jpeg" alt="" />
-        <img class="h-[100%] w-[100%]" src="./img/welcome/6.jpeg" alt="" />
-        <img class="h-[100%] w-[100%]" src="./img/welcome/7.jpeg" alt="" />
-        <img class="h-[100%] w-[100%]" src="./img/welcome/8.jpeg" alt="" />
+        <img
+          class="h-[100%] w-[100%] hidden sm:flex"
+          src="./img/welcome/3.jpeg"
+          alt=""
+        />
+        <img
+          class="h-[100%] w-[100%] hidden sm:flex"
+          src="./img/welcome/4.jpeg"
+          alt=""
+        />
+        <img
+          class="h-[100%] w-[100%] hidden md:flex"
+          src="./img/welcome/5.jpeg"
+          alt=""
+        />
+        <img
+          class="h-[100%] w-[100%] hidden md:flex"
+          src="./img/welcome/6.jpeg"
+          alt=""
+        />
+        <img
+          class="h-[100%] w-[100%] hidden xl:flex"
+          src="./img/welcome/7.jpeg"
+          alt=""
+        />
+        <img
+          class="h-[100%] w-[100%] hidden xl:flex"
+          src="./img/welcome/8.jpeg"
+          alt=""
+        />
       </div>
       <div class="h-[100%] absolute z-[40] flex justify-center items-center">
         <div class="bg-[rgba(69_10_10_/_0.7)] rounded-[10px]">
-          <h1 class="text-[90px] text-white p-1">4°1° T.C - exposición</h1>
+          <h1 class="text-[40px] xl:text-[90px] text-white p-1">
+            4°1° T.C - exposición
+          </h1>
         </div>
       </div>
     </section>
