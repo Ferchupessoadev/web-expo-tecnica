@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  color: white;
+  color: black;
 }
 
 .toggle-nav {
