@@ -14,6 +14,6 @@ function toggleNav() {
   }
   navIsVisible = !navIsVisible;
 }
-
+    
 navBtn.addEventListener("click", () => toggleNav());
 modalnav.addEventListener("click", () => toggleNav());

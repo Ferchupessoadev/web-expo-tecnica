@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background: white;
+}
 * {
   color: black;
+}
+
+#header {
+  color: black;
+  background: rgba(21, 21, 21, 0.115);
 }
 
 .toggle-nav {
