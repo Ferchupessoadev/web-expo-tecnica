@@ -2,19 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: white;
-}
 * {
   color: black;
+  scroll-behavior: smooth;
 }
 
 #header {
   color: black;
-  background: rgba(21, 21, 21, 0.115);
+  background: transparent;
+}
+
+.active {
+  color: rgb(153 27 27 / var(--tw-text-opacity));
+  border-bottom: 2px solid rgb(153 27 27 / var(--tw-text-opacity));
 }
 
 .toggle-nav {
   transform: translateX(-50%) !important;
   transition: transform 0.3s ease-in-out 0s !important;
+}
+
+.banner-welcome {
+  background: url("../img/welcome/banner.jpg") no-repeat center center/cover;
+  /* animation: banner_animation 4s ease-in-out alternate infinite; */
+  /* background-attachment: fixed; */
+}
+
+@keyframes banner_animation {
+  0% {
+    background: url("../img/icon-school.png") no-repeat center center/cover;
+  }
+  20% {
+    background: url("../img/welcome/banner.jpg") no-repeat center center/cover;
+  }
+  100% {
+    background: url("../img/welcome/1.jpeg") no-repeat center center/cover;
+  }
 }

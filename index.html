@@ -32,51 +32,69 @@
   <body id="body">
     <header
       id="header"
-      class="flex sm:justify-between justify-center pr-10 items-center bg-transparent h-[60px] absolute z-[200] w-[100%]"
+      class="flex justify-center md:justify-between pr-10 items-center h-[60px] fixed z-[200] w-[100vw]"
     >
-      <img
-        class="w-[40px] h-[40px] absolute"
-        src="./img/icon-school.png"
-        alt=""
-      />
-      <h1 class="sm:text-[30px] px-10 text-[14px] text-white">
+      <h1 class="pl-5 md:text-[20px] xl:text-[24px] text-white">
         Expo Técnica 2023 - Computación
       </h1>
       <button
-        class="hidden group p-0 m-0 outline-none absolute left-4 w-auto h-auto"
+        class="group p-0 m-0 outline-none absolute left-4 w-auto h-auto block md:hidden"
         id="nav-btn"
       >
         <i
           class="text-white group-hover:text-gray-400 fa-solid fa-bars sm:text-[30px] text-[28px] pr-4"
         ></i>
       </button>
-      <nav id="nav-desktop" class="">
+      <nav id="nav-desktop" class="hidden md:flex">
         <ul class="flex gap-5">
-          <li class="py-3 text-[18px]">
-            <a class="hover:text-red-800 text-white" href="#">Inicio</a>
+          <li class="py-3 md:text-[18px] text-[14px]">
+            <a
+              class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
+              href="#"
+              id="home-link"
+              >Inicio</a
+            >
           </li>
-          <li class="py-3 text-[18px]">
-            <a class="hover:text-red-800 text-white" href="#">Drones</a>
+          <li class="py-3 md:text-[18px] text-[14px]">
+            <a
+              class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
+              id="dron-link"
+              href="#section-dron"
+              >Drones</a
+            >
           </li>
-          <li class="py-3 text-[18px]">
-            <a class="hover:text-red-800 text-white" href="#">Robobloq</a>
+          <li class="py-3 md:text-[18px] text-[14px]">
+            <a
+              class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
+              href="#section-robobloq"
+              id="robobloq-link"
+              >Robobloq</a
+            >
           </li>
-          <li class="py-3 text-[18px]">
-            <a class="hover:text-red-800 text-white" href="#">Brazo robotico</a>
+          <li class="py-3 md:text-[18px] text-[14px]">
+            <a
+              class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
+              href="#section-brazo"
+              id="brazo-link"
+              >Brazo robotico</a
+            >
+          </li>
+          <li class="py-3 md:text-[18px] text-[14px]">
+            <a
+              class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
+              href="#"
+              >Smart led</a
+            >
           </li>
         </ul>
       </nav>
     </header>
-    <div
-      class="hidden w-full h-[100vh] bg-black opacity-60 z-30 absolute"
-      id="modal-nav"
-    ></div>
     <nav
-      class="transition-transform duration-75 ease-in-out absolute z-[45] tras sm:w-max w-full translate-y-[60px] h-[calc(100vh_-_60px)] bg-red-950 flex flex-col justify-start gap-4 left-0 translate-x-[-100%]"
+      class="absolute transition-transform duration-75 ease-in-out z-[45] tras sm:w-max w-full translate-y-[60px] h-[calc(100vh_-_60px)] bg-red-950 flex flex-col justify-start gap-4 left-0 translate-x-[-100%]"
       id="nav"
     >
       <h1
-        class="sm:px-16 px-8 text-[30px] flex flex-col items-center text-black"
+        class="sm:px-16 px-8 text-[25px] md:text-[30px] flex flex-col items-center text-black"
       >
         E.E.T N°2 <b>"Independencia"</b>
       </h1>
@@ -101,6 +119,11 @@
             >Brazo robotico</a
           >
         </li>
+        <li class="py-3 bg-red-950 text-[18px]">
+          <a class="sm:px-16 px-8 hover:text-red-800 text-white" href="#"
+            >Smart led</a
+          >
+        </li>
       </ul>
       <div class="w-[100%] h-max flex justify-center">
         <img
@@ -110,24 +133,135 @@
         />
       </div>
     </nav>
-    <section class="relative flex justify-center w-full h-[100vh]">
+    <div
+      class="hidden w-full h-[calc(100vh_-_60px)] bg-black opacity-60 z-30 absolute"
+      id="modal-nav"
+    ></div>
+    <section
+      id="section-inicio"
+      class="relative flex justify-center w-full h-[100vh]"
+    >
       <div
         class="w-[100%] h-[100vh] bg-black z-20 opacity-10 absolute gap-2"
       ></div>
-      <div class="h-[100%] w-[100%] z-30 flex">
-        <img
-          class="h-[100%] w-[100%] hidden md:flex"
-          src="./img/welcome/1.jpeg"
-          alt=""
-        />
-      </div>
+      <div class="h-[100%] w-[100%] z-30 flex banner-welcome"></div>
+      <img
+        class="absolute right-10 top-20 z-30 w-32 h-32 bg-cover"
+        src="./img/icon-school.png"
+        alt=""
+      />
       <div
         class="h-[100%] w-[100%] absolute z-[40] flex justify-start items-end"
       >
         <div class="bg-[rgba(69_10_10_/_0.95)] mx-10 rounded-[10px] mb-[20px]">
-          <h1 class="text-[40px] xl:text-[50px] text-white px-5">
-            4°1° T.C - exposición
+          <h1 class="text-[24px] md:text-[30px] xl:text-[50px] text-white px-5">
+            4°1° T.C - Exposición
           </h1>
+        </div>
+      </div>
+    </section>
+    <h3 class="text-center bg-red-950 text-white text-[45px]">Proyectos</h3>
+    <section
+      class="w-[100%] h-max flex flex-col items-center gap-11 bg-red-950 border-b-2 border-red-800"
+      id="section-dron"
+    >
+      <div class="flex w-[80%] h-max justify-center items-center gap-10">
+        <img
+          class="w-[480px] h-[400px]"
+          src="./img/secciones/dron.png"
+          alt=""
+        />
+        <div class="h-[400px] flex flex-col justify-center">
+          <p class="text-white text-[40px]">Dron Tello edu</p>
+          <p class="text-white block h-max">
+            Tello EDU es un dron impresionante y programable perfecto para la
+            educación. Puede aprender fácilmente lenguajes de programación como
+            Scratch, Python y Swift. Con un SDK 2.0 actualizado, Tello EDU viene
+            con comandos más avanzados y mayores interfaces de datos. Completo
+            con la tecnología de control de vuelo de DJI, Tello EDU también
+            admite Estabilización Electrónica de Imagen. Escriba código para
+            ordenar a varias EDU Tello que vuelen en un enjambre y desarrolle
+            sorprendentes funciones de IA. ¡Programar nunca ha sido tan
+            divertido con Tello EDU!
+          </p>
+          <div class="text-center mt-6">
+            <a
+              class="transition-colors duration-200 ease-in text-red-950 hover:text-gray-100 hover:bg-red-800 font-bold px-5 py-2 bg-gray-100 rounded-[6px] inline-block w-max"
+              href="https://www.ryzerobotics.com/tello-edu"
+              target="_blank"
+            >
+              leer más
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="w-[100%] h-max flex flex-col items-center gap-11 bg-red-950 border-b-2 border-red-800"
+      id="section-robobloq"
+    >
+      <div class="flex w-[80%] h-max justify-center items-center gap-10">
+        <div class="h-[400px] flex flex-col justify-center">
+          <p class="text-white text-[40px]">Robobloq Qoopers</p>
+          <p class="text-white block h-max">
+            Qoopers es un robot muy versátil y expresivo que permite profundizar
+            en el aprendizaje y conocimiento de la programación y la robótica.
+            Cuenta con sensores y actuadores cuyo funcionamiento puede ser
+            comandado con cualquier dispositivo móvil y PC, utilizando
+            programación gráfica con bloques icónicos o con bloques escritos,
+            programación en código Python o Arduino IDE. Qoopers cuenta con una
+            placa Arduino adaptada con 8 puertos de sencilla conexión para
+            sensores y actuadores que pueden estar operando en simultáneo. La
+            placa, llamada Q-mind plus permite expandir sus posibilidades y
+            conectarse a una Raspberry Pi y/o una placa Micro:bit.
+          </p>
+          <div class="text-center mt-6">
+            <a
+              class="transition-colors duration-200 ease-in text-red-950 hover:text-gray-100 hover:bg-red-800 font-bold px-5 py-2 bg-gray-100 rounded-[6px] inline-block w-max"
+              href="https://www.robobloq.com/product/Qoopers"
+              target="_blank"
+            >
+              leer más
+            </a>
+          </div>
+        </div>
+        <img
+          class="w-[480px] h-[400px]"
+          src="./img/secciones/robobloq.webp"
+          alt=""
+        />
+      </div>
+    </section>
+    <section
+      class="w-[100%] h-max flex flex-col items-center gap-11 bg-red-950 border-b-2 border-red-800"
+      id="section-brazo"
+    >
+      <div class="flex w-[80%] h-max justify-center items-center gap-10">
+        <img
+          class="w-[800px] h-[400px]"
+          src="./img/secciones/brazo.jpg"
+          alt=""
+        />
+        <div class="h-[400px] flex flex-col justify-center">
+          <p class="text-white text-[30px]">Brazo robotico con arduino</p>
+          <p class="text-white block h-max text-[14px]">
+            Este proyecto tiene como objetivo la creación de un brazo robótico
+            versátil y asequible, diseñado para ser controlado de forma
+            intuitiva mediante sensores infrarrojos y una placa Arduino. Este
+            brazo robótico no solo representa una emocionante incursión en el
+            mundo de la robótica, sino que también puede ser una herramienta
+            educativa valiosa y encontrar aplicaciones prácticas en la
+            automatización de tareas simples.
+          </p>
+          <div class="text-center mt-6">
+            <a
+              class="transition-colors duration-200 ease-in text-red-950 hover:text-gray-100 hover:bg-red-800 font-bold px-5 py-2 bg-gray-100 rounded-[6px] inline-block w-max"
+              href="https://www.arduino.cc/"
+              target="_blank"
+            >
+              leer más
+            </a>
+          </div>
         </div>
       </div>
     </section>
