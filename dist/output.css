@@ -620,6 +620,14 @@ video {
   height: max-content;
 }
 
+.h-\[40\] {
+  height: 40;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
 .w-\[100\%\] {
   width: 100%;
 }
@@ -634,6 +642,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[40px\] {
+  width: 40px;
 }
 
 .translate-x-\[-100\%\] {
