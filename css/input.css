@@ -7,6 +7,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background: rgba(153 27 27 / var(--tw-text-opacity));
+}
+
 .header {
   color: black;
   background: transparent;
@@ -31,6 +35,12 @@
 
 .img-seciones {
   animation: fadeIn 3s ease;
+}
+
+.img-galery {
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
 }
 
 img {
