@@ -970,7 +970,7 @@ body {
   background: url("../img/welcome/banner.jpg") no-repeat center center/cover;
   /* animation: banner_animation 4s ease-in-out alternate infinite; */
   /* background-attachment: fixed; */
-  animation: fadeIn 3s ease;
+  animation: fadeIn 3.3s ease;
 }
 
 .img-seciones {
