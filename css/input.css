@@ -7,7 +7,7 @@
   scroll-behavior: smooth;
 }
 
-#header {
+.header {
   color: black;
   background: transparent;
 }
@@ -26,6 +26,25 @@
   background: url("../img/welcome/banner.jpg") no-repeat center center/cover;
   /* animation: banner_animation 4s ease-in-out alternate infinite; */
   /* background-attachment: fixed; */
+  animation: fadeIn 3s ease;
+}
+
+.img-seciones {
+  animation: fadeIn 3s ease;
+}
+
+img {
+  object-fit: no-repeat cover cover/center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+  }
+  10% {
+    filter: brightness(1) blur(10px);
+  }
 }
 
 @keyframes banner_animation {

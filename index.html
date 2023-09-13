@@ -18,6 +18,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap"
       rel="stylesheet"
     />
+    <!-- Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- FONT AWESOME -->
     <script
       src="https://kit.fontawesome.com/f845b9182b.js"
@@ -32,7 +34,7 @@
   <body id="body">
     <header
       id="header"
-      class="flex justify-center md:justify-between pr-10 items-center h-[60px] fixed z-[200] w-[100vw]"
+      class="header flex justify-center md:justify-between pr-10 items-center h-[60px] fixed z-[200] w-[100vw]"
     >
       <h1 class="pl-5 md:text-[20px] xl:text-[24px] text-white">
         Expo Técnica 2023 - Computación
@@ -47,7 +49,7 @@
       </button>
       <nav id="nav-desktop" class="hidden md:flex">
         <ul class="flex gap-5">
-          <li class="py-3 md:text-[18px] text-[14px]">
+          <li class="py-3 md:text-[12px] xl:text-[14px]">
             <a
               class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
               href="#"
@@ -55,7 +57,7 @@
               >Inicio</a
             >
           </li>
-          <li class="py-3 md:text-[18px] text-[14px]">
+          <li class="py-3 md:text-[12px] xl:text-[14px]">
             <a
               class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
               id="dron-link"
@@ -63,7 +65,7 @@
               >Drones</a
             >
           </li>
-          <li class="py-3 md:text-[18px] text-[14px]">
+          <li class="py-3 md:text-[12px] xl:text-[14px]">
             <a
               class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
               href="#section-robobloq"
@@ -71,7 +73,7 @@
               >Robobloq</a
             >
           </li>
-          <li class="py-3 md:text-[18px] text-[14px]">
+          <li class="py-3 md:text-[12px] xl:text-[14px]">
             <a
               class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
               href="#section-brazo"
@@ -79,10 +81,11 @@
               >Brazo robotico</a
             >
           </li>
-          <li class="py-3 md:text-[18px] text-[14px]">
+          <li class="py-3 md:text-[12px] xl:text-[14px]">
             <a
               class="hover:text-red-800 hover:border-red-800 hover:border-b-2 text-white"
-              href="#"
+              href="#section-smart-led"
+              id="smart-led-link"
               >Smart led</a
             >
           </li>
@@ -90,7 +93,7 @@
       </nav>
     </header>
     <nav
-      class="absolute transition-transform duration-75 ease-in-out z-[45] tras sm:w-max w-full translate-y-[60px] h-[calc(100vh_-_60px)] bg-red-950 flex flex-col justify-start gap-4 left-0 translate-x-[-100%]"
+      class="fixed transition-transform duration-75 ease-in-out z-[45] tras sm:w-max w-full translate-y-[60px] h-[calc(100vh_-_60px)] bg-red-950 flex flex-col justify-start gap-4 left-0 translate-x-[-100%]"
       id="nav"
     >
       <h1
@@ -100,27 +103,37 @@
       </h1>
       <ul class="flex flex-col">
         <li class="py-3 bg-red-950 text-[18px]">
-          <a class="sm:px-16 px-8 hover:text-red-800 text-white" href="#"
+          <a
+            class="link-mobile sm:px-16 px-8 hover:text-red-800 text-white"
+            href="#section-inicio"
             >Inicio</a
           >
         </li>
         <li class="py-3 bg-red-950 text-[18px]">
-          <a class="sm:px-16 px-8 hover:text-red-800 text-white" href="#"
+          <a
+            class="link-mobile sm:px-16 px-8 hover:text-red-800 text-white"
+            href="#section-dron"
             >Drones</a
           >
         </li>
         <li class="py-3 bg-red-950 text-[18px]">
-          <a class="sm:px-16 px-8 hover:text-red-800 text-white" href="#"
+          <a
+            class="link-mobile sm:px-16 px-8 hover:text-red-800 text-white"
+            href="#section-robobloq"
             >Robobloq</a
           >
         </li>
         <li class="py-3 bg-red-950 text-[18px]">
-          <a class="sm:px-16 px-8 hover:text-red-800 text-white" href="#"
+          <a
+            class="link-mobile sm:px-16 px-8 hover:text-red-800 text-white"
+            href="#section-brazo"
             >Brazo robotico</a
           >
         </li>
         <li class="py-3 bg-red-950 text-[18px]">
-          <a class="sm:px-16 px-8 hover:text-red-800 text-white" href="#"
+          <a
+            class="link-mobile sm:px-16 px-8 hover:text-red-800 text-white"
+            href="#section-smart-led"
             >Smart led</a
           >
         </li>
@@ -146,12 +159,12 @@
       ></div>
       <div class="h-[100%] w-[100%] z-30 flex banner-welcome"></div>
       <img
-        class="absolute right-10 top-20 z-30 w-32 h-32 bg-cover"
+        class="absolute right-10 top-20 z-30 w-32 h-32 max-md:w-[320px] max-md:h-[320px] max-md:top-0 max-md:m-auto max-md:bottom-0 max-md:left-0 max-md:right-0 bg-cover"
         src="./img/icon-school.png"
         alt=""
       />
       <div
-        class="h-[100%] w-[100%] absolute z-[40] flex justify-start items-end"
+        class="h-[100%] w-[100%] absolute z-[40] flex justify-start max-md:justify-center items-end"
       >
         <div class="bg-[rgba(69_10_10_/_0.95)] mx-10 rounded-[10px] mb-[20px]">
           <h1 class="text-[24px] md:text-[30px] xl:text-[50px] text-white px-5">
@@ -165,13 +178,15 @@
       class="w-[100%] h-max flex flex-col items-center gap-11 bg-red-950 border-b-2 border-red-800"
       id="section-dron"
     >
-      <div class="flex w-[80%] h-max justify-center items-center gap-10">
+      <div
+        class="flex flex-col xl:flex-row max-sm:w-[100%] w-[80%] h-max justify-center items-center max-sm:gap-1 gap-10"
+      >
         <img
-          class="w-[480px] h-[400px]"
+          class="img-secciones max-sm:w-[100%] w-[480px] h-[400px]"
           src="./img/secciones/dron.png"
           alt=""
         />
-        <div class="h-[400px] flex flex-col justify-center">
+        <div class="max-sm:w-[80%] h-max flex flex-col justify-center">
           <p class="text-white text-[40px]">Dron Tello edu</p>
           <p class="text-white block h-max">
             Tello EDU es un dron impresionante y programable perfecto para la
@@ -200,8 +215,10 @@
       class="w-[100%] h-max flex flex-col items-center gap-11 bg-red-950 border-b-2 border-red-800"
       id="section-robobloq"
     >
-      <div class="flex w-[80%] h-max justify-center items-center gap-10">
-        <div class="h-[400px] flex flex-col justify-center">
+      <div
+        class="flex flex-col xl:flex-row max-sm:w-[100%] w-[80%] h-max justify-center items-center max-sm:gap-1 gap-10"
+      >
+        <div class="max-sm:w-[80%] h-max flex flex-col justify-center">
           <p class="text-white text-[40px]">Robobloq Qoopers</p>
           <p class="text-white block h-max">
             Qoopers es un robot muy versátil y expresivo que permite profundizar
@@ -226,7 +243,7 @@
           </div>
         </div>
         <img
-          class="w-[480px] h-[400px]"
+          class="img-secciones max-sm:w-[100%] w-[480px] h-[400px]"
           src="./img/secciones/robobloq.webp"
           alt=""
         />
@@ -236,14 +253,16 @@
       class="w-[100%] h-max flex flex-col items-center gap-11 bg-red-950 border-b-2 border-red-800"
       id="section-brazo"
     >
-      <div class="flex w-[80%] h-max justify-center items-center gap-10">
+      <div
+        class="flex flex-col xl:flex-row max-sm:w-[100%] w-[80%] h-max justify-center items-center max-sm:gap-1 gap-10"
+      >
         <img
-          class="w-[800px] h-[400px]"
+          class="img-secciones max-sm:w-[100%] w-[480px] h-[400px]"
           src="./img/secciones/brazo.jpg"
           alt=""
         />
-        <div class="h-[400px] flex flex-col justify-center">
-          <p class="text-white text-[30px]">Brazo robotico con arduino</p>
+        <div class="max-sm:w-[80%] h-max flex flex-col justify-center">
+          <p class="text-white text-[30px]">Brazo robotico</p>
           <p class="text-white block h-max text-[14px]">
             Este proyecto tiene como objetivo la creación de un brazo robótico
             versátil y asequible, diseñado para ser controlado de forma
@@ -265,6 +284,66 @@
         </div>
       </div>
     </section>
+    <section
+      class="w-[100%] h-max flex flex-col items-center gap-11 bg-red-950"
+      id="section-smart-led"
+    >
+      <div
+        class="flex flex-col xl:flex-row max-sm:w-[100%] w-[80%] h-max justify-center items-center max-sm:gap-1 gap-10"
+      >
+        <div class="max-sm:w-[80%] h-max flex flex-col justify-center">
+          <p class="text-white text-[40px]">Smart led</p>
+          <p class="text-white block h-max">
+            Este proyecto tiene como objetivo crear una maqueta de una casa en
+            miniatura que pueda controlar la iluminación de dos focos de manera
+            remota utilizando una placa Arduino y un módulo Bluetooth. La
+            maqueta no solo es un ejercicio práctico de electrónica y
+            programación, sino también una demostración visual de cómo la
+            tecnología puede mejorar la automatización y comodidad en un hogar.
+          </p>
+          <div class="text-center mt-6">
+            <a
+              class="transition-colors duration-200 ease-in text-red-950 hover:text-gray-100 hover:bg-red-800 font-bold px-5 py-2 bg-gray-100 rounded-[6px] inline-block w-max"
+              href="https://www.arduino.cc/"
+              target="_blank"
+            >
+              leer más
+            </a>
+          </div>
+        </div>
+        <img
+          class="img-secciones max-sm:w-[100%] w-[480px] h-[400px]"
+          src="./img/secciones/smart-led.jpg"
+          alt=""
+        />
+      </div>
+    </section>
+    <footer
+      class="bg-slate-900 h-max flex relative md:justify-evenly items-center max-md:flex-col w-[100%]"
+    >
+      <div class="h-[100%] flex flex-col justify-center items-center gap-2">
+        <div class="flex justify-center items-center">
+          <img
+            class="w-32 h-32 text-center"
+            src="./img/icon-school.png"
+            alt=""
+          />
+          <h4 class="text-white text-center">
+            E.E.T N°2 <br />
+            "Independencia"
+          </h4>
+        </div>
+        <div class="flex justify-start gap-4">
+          <a href="#">
+            <i class="text-blue-800 text-[40px] fa-brands fa-facebook"></i>
+          </a>
+          <a href="mailto:tecnica2concordia@yahoo.com.ar">
+            <i class="text-red-900 text-[45px] fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <p class="text-white">© Tecnica 2 ™ Concordia Expotecnica 4TO 1RA T.C</p>
+    </footer>
     <script src="js/app.js" type="module"></script>
   </body>
 </html>
